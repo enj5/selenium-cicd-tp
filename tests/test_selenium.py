@@ -4,10 +4,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait, Select
 from selenium.webdriver.support import expected_conditions as EC
 
-# Rendre accessible le fichier à github
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-
-FILE_PATH = "file://" + os.path.normpath(BASE_DIR, "../src/index.html")
+FILE_PATH = "file://" + os.path.abspath("../src/index.html")
 
 class TestCalculator:
     def test_page_loads(self, driver):
